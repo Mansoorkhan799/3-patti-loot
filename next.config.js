@@ -34,7 +34,6 @@ const nextConfig = {
   compress: true,
   // Experimental features for better performance
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['@/components', '@/lib'],
   },
   // Power by header
