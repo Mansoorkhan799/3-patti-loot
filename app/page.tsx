@@ -1,6 +1,13 @@
-import Hero from "@/components/Hero";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+import Image from "next/image";
 import { generateSEO } from "@/lib/seo";
+
+// Lazy load Hero component to reduce initial bundle size
+const Hero = dynamic(() => import("@/components/Hero"), {
+  ssr: true,
+  loading: () => <div className="h-96 bg-gaming-dark animate-pulse" />,
+});
 
 export const metadata = generateSEO({
   title: "3 Patti Loot Game Download | New Earning App in Pakistan 2026",
@@ -65,35 +72,19 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="glass rounded-lg p-8 text-center">
-              <div className="w-16 h-16 bg-gaming-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🎮</span>
+            {[
+              { icon: "🎮", title: "Multiple Game Categories", desc: "Enjoy multiplayer games, skill-based games, and exciting slots with beautiful design and smooth gameplay." },
+              { icon: "💰", title: "Real Money Earning", desc: "Earn real cash rewards and bonuses. Withdraw winnings instantly through EasyPaisa and JazzCash." },
+              { icon: "📱", title: "Smooth Performance", desc: "Fast performance on all Android devices, even on older models with low storage and slow internet." }
+            ].map((feature, idx) => (
+              <div key={idx} className="glass rounded-lg p-8 text-center">
+                <div className="w-16 h-16 bg-gaming-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">{feature.icon}</span>
+                </div>
+                <h3 className="text-xl font-gaming font-bold mb-3">{feature.title}</h3>
+                <p className="text-gray-400">{feature.desc}</p>
               </div>
-              <h3 className="text-xl font-gaming font-bold mb-3">Multiple Game Categories</h3>
-              <p className="text-gray-400">
-                Enjoy multiplayer games, skill-based games, and exciting slots with beautiful design and smooth gameplay.
-              </p>
-            </div>
-
-            <div className="glass rounded-lg p-8 text-center">
-              <div className="w-16 h-16 bg-gaming-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">💰</span>
-              </div>
-              <h3 className="text-xl font-gaming font-bold mb-3">Real Money Earning</h3>
-              <p className="text-gray-400">
-                Earn real cash rewards and bonuses. Withdraw winnings instantly through EasyPaisa and JazzCash.
-              </p>
-            </div>
-
-            <div className="glass rounded-lg p-8 text-center">
-              <div className="w-16 h-16 bg-gaming-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">📱</span>
-              </div>
-              <h3 className="text-xl font-gaming font-bold mb-3">Smooth Performance</h3>
-              <p className="text-gray-400">
-                Fast performance on all Android devices, even on older models with low storage and slow internet.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -249,8 +240,18 @@ export default function HomePage() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-          <div className="max-w-sm mx-auto md:max-w-none">
-            <img src="/3patti-loot.webp" alt="3 Patti Loot App Screenshot" className="rounded-lg shadow-2xl w-full" />
+          <div className="max-w-sm mx-auto md:max-w-none w-full">
+            <div className="relative w-full" style={{ aspectRatio: '1/2', maxWidth: '400px' }}>
+              <Image 
+                src="/3-patti-loot-apk.webp" 
+                alt="3 Patti Loot App Screenshot" 
+                fill
+                className="rounded-lg shadow-2xl object-contain"
+                priority
+                quality={85}
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
+            </div>
           </div>
           <div className="glass rounded-lg p-8">
             <h3 className="text-2xl font-gaming font-bold mb-4 gradient-text">Download Now & Get 100% Bonus!</h3>
@@ -511,7 +512,15 @@ export default function HomePage() {
           </div>
 
           <div className="mb-12">
-            <img src="/refer-and-earn.webp" alt="Refer and Earn Commission" className="rounded-lg shadow-2xl mx-auto w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl" />
+            <Image 
+              src="/3-patti-loot-refer-and-earn.webp" 
+              alt="Refer and Earn Commission" 
+              width={800}
+              height={600}
+              className="rounded-lg shadow-2xl mx-auto max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl"
+              style={{ width: '100%', height: 'auto' }}
+              loading="lazy"
+            />
           </div>
 
           <div className="space-y-8">

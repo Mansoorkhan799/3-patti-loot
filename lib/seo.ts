@@ -350,3 +350,120 @@ export function generateMobileAppSchema() {
   };
 }
 
+/**
+ * Generate JSON-LD structured data for Video Game (for specific games)
+ */
+export function generateVideoGameSchema(data: {
+  name: string;
+  description: string;
+  image: string;
+  genre: string[];
+  playMode?: string[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoGame',
+    name: data.name,
+    description: data.description,
+    image: data.image,
+    gamePlatform: 'Android',
+    genre: data.genre,
+    playMode: data.playMode || ['MultiPlayer', 'SinglePlayer'],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.7',
+      ratingCount: '50000',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'PKR',
+    },
+  };
+}
+
+/**
+ * Generate JSON-LD structured data for HowTo (for guides)
+ */
+export function generateHowToSchema(data: {
+  name: string;
+  description: string;
+  image?: string;
+  steps: Array<{ name: string; text: string; url?: string }>;
+  totalTime?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: data.name,
+    description: data.description,
+    image: data.image,
+    totalTime: data.totalTime,
+    step: data.steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      url: step.url,
+    })),
+  };
+}
+
+/**
+ * Generate JSON-LD structured data for SoftwareApplication (alternative to MobileApplication)
+ */
+export function generateSoftwareAppSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: '3 Patti Loot',
+    alternateName: 'Teen Patti Loot',
+    description: 'Download 3 Patti Loot APK v1.199(1) - New Earning App in Pakistan 2026. Play 25+ card games including Teen Patti, Rummy, Dragon vs Tiger. Instant withdrawals via JazzCash & EasyPaisa.',
+    operatingSystem: 'Android 5.0 and above',
+    applicationCategory: 'Game',
+    applicationSubCategory: 'Card Game',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'PKR',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '300000',
+      reviewCount: '50000',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    downloadUrl: 'https://3pattilootpkk1.com?from_gameid=5208127&channelCode=200000',
+    softwareVersion: 'V1.199(1)',
+    fileSize: '49MB',
+    installUrl: 'https://3pattilootpkk1.com?from_gameid=5208127&channelCode=200000',
+    screenshot: [
+      `${SITE_URL}/3 Patti Loot.webp`,
+      `${SITE_URL}/3patti-loot.webp`,
+    ],
+    image: `${SITE_URL}/3 Patti Loot.webp`,
+    inLanguage: ['en', 'ur'],
+    countriesSupported: 'PK',
+    datePublished: '2024-01-01',
+    dateModified: new Date().toISOString().split('T')[0],
+    featureList: [
+      '25+ Card Games',
+      'Real Money Earning',
+      'Instant Withdrawals',
+      'JazzCash & EasyPaisa Support',
+      '100% Deposit Bonus',
+      'Daily Login Rewards',
+      'Referral Program',
+      '24/7 Customer Support',
+    ],
+  };
+}

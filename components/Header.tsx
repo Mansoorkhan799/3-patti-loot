@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
@@ -17,18 +18,19 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 glass border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Top Bar */}
+        {/* Top Bar with Logo and Menu */}
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group" onClick={closeMobileMenu}>
             <div className="w-12 h-12 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform overflow-hidden">
-              <img 
-                src="/3 Patti Loot.webp" 
+              <Image 
+                src="/3-patti-loot-logo.webp" 
                 alt="3 Patti Loot Logo - Pakistan Online Gaming App" 
-                className="w-full h-full object-cover"
-                width="40"
-                height="40"
-                loading="eager"
+                width={48}
+                height={48}
+                className="object-cover"
+                style={{ width: '100%', height: '100%' }}
+                priority
               />
             </div>
             <div>
@@ -38,6 +40,51 @@ export default function Header() {
               <p className="text-xs text-gray-400">Play, Win & Enjoy</p>
             </div>
           </Link>
+
+          {/* Desktop Navigation - Right side of logo */}
+          <nav className="hidden md:flex items-center flex-nowrap gap-2 overflow-x-auto">
+            <Link 
+              href="/" 
+              className="px-3 py-2 rounded-lg hover:bg-gaming-accent hover:text-gaming-dark transition-all font-semibold whitespace-nowrap text-sm"
+            >
+              Home
+            </Link>
+            
+            <Link 
+              href="/blog" 
+              className="px-3 py-2 rounded-lg hover:bg-gaming-accent hover:text-gaming-dark transition-all font-semibold whitespace-nowrap text-sm"
+            >
+              Blog
+            </Link>
+
+            <Link 
+              href="/about" 
+              className="px-3 py-2 rounded-lg hover:bg-gaming-accent hover:text-gaming-dark transition-all font-semibold whitespace-nowrap text-sm"
+            >
+              About Us
+            </Link>
+
+            <Link 
+              href="/contact" 
+              className="px-3 py-2 rounded-lg hover:bg-gaming-accent hover:text-gaming-dark transition-all font-semibold whitespace-nowrap text-sm"
+            >
+              Contact Us
+            </Link>
+
+            <Link 
+              href="/privacy-policy" 
+              className="px-3 py-2 rounded-lg hover:bg-gaming-accent hover:text-gaming-dark transition-all font-semibold whitespace-nowrap text-sm"
+            >
+              Privacy Policy
+            </Link>
+
+            <Link 
+              href="/disclaimer" 
+              className="px-3 py-2 rounded-lg hover:bg-gaming-accent hover:text-gaming-dark transition-all font-semibold whitespace-nowrap text-sm"
+            >
+              Disclaimer
+            </Link>
+          </nav>
 
           {/* Mobile Menu Button */}
           <button 
@@ -56,51 +103,6 @@ export default function Header() {
             )}
           </button>
         </div>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1 py-3 border-t border-white/10">
-          <Link 
-            href="/" 
-            className="px-4 py-2 rounded-lg hover:bg-gaming-accent hover:text-gaming-dark transition-all font-semibold"
-          >
-            Home
-          </Link>
-          
-          <Link 
-            href="/blog" 
-            className="px-4 py-2 rounded-lg hover:bg-gaming-accent hover:text-gaming-dark transition-all font-semibold"
-          >
-            Blog
-          </Link>
-
-          <Link 
-            href="/about" 
-            className="px-4 py-2 rounded-lg hover:bg-gaming-accent hover:text-gaming-dark transition-all font-semibold"
-          >
-            About Us
-          </Link>
-
-          <Link 
-            href="/contact" 
-            className="px-4 py-2 rounded-lg hover:bg-gaming-accent hover:text-gaming-dark transition-all font-semibold"
-          >
-            Contact Us
-          </Link>
-
-          <Link 
-            href="/privacy-policy" 
-            className="px-4 py-2 rounded-lg hover:bg-gaming-accent hover:text-gaming-dark transition-all font-semibold"
-          >
-            Privacy Policy
-          </Link>
-
-          <Link 
-            href="/disclaimer" 
-            className="px-4 py-2 rounded-lg hover:bg-gaming-accent hover:text-gaming-dark transition-all font-semibold"
-          >
-            Disclaimer
-          </Link>
-        </nav>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (

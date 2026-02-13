@@ -1,3 +1,5 @@
+'use client';
+
 export default function Hero() {
   return (
     <section className="relative py-20 px-4 overflow-hidden" style={{ contain: 'layout style paint' }}>

@@ -18,7 +18,7 @@ export async function GET() {
           caption: 'Play and earn real money with 3 Patti Loot gaming app',
         },
         {
-          url: `${SITE_URL}/refer-and-earn.webp`,
+          url: `${SITE_URL}/3-patti-loot-refer-and-earn.webp`,
           title: '3 Patti Loot Refer and Earn Program',
           caption: 'Earn commission on every referral - PKR bonus rewards',
         },

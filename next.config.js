@@ -22,7 +22,9 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
+    minimumCacheTTL: 31536000, // 1 year for better caching
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   // Enable React strict mode for better development experience
   reactStrictMode: true,
@@ -30,6 +32,11 @@ const nextConfig = {
   swcMinify: true,
   // Compression
   compress: true,
+  // Experimental features for better performance
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@/components', '@/lib'],
+  },
   // Power by header
   poweredByHeader: false,
   // Compiler options for better performance
@@ -65,7 +72,7 @@ const nextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin'
-          }
+          },
         ],
       },
       // Cache static assets aggressively for better crawl efficiency
