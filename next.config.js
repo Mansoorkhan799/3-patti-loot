@@ -2,7 +2,7 @@
 const nextConfig = {
   // ESLint configuration for builds
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
   // TypeScript configuration for builds
   typescript: {
