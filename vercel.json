@@ -1,31 +1,7 @@
 {
   "installCommand": "npm install --legacy-peer-deps",
   "buildCommand": "npm run build",
-  "outputDirectory": ".next",
   "framework": "nextjs",
-  "regions": ["sin1"],
-  "env": {
-    "NEXT_PUBLIC_SITE_URL": "https://3pattilootapk.com.pk",
-    "NEXT_PUBLIC_SITE_NAME": "3 Patti Loot"
-  },
-  "headers": [
-    {
-      "source": "/robots.txt",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/plain; charset=utf-8"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, s-maxage=3600"
-        },
-        {
-          "key": "X-Robots-Tag",
-          "value": "none"
-        }
-      ]
-    }
-  ]
+  "regions": ["sin1"]
 }
 
