@@ -17,7 +17,7 @@ export function preloadCriticalResources() {
   const imagePreload = document.createElement('link');
   imagePreload.rel = 'preload';
   imagePreload.as = 'image';
-  imagePreload.href = '/3-patti-loot-logo.webp';
+  imagePreload.href = '/3-patti-loot.webp';
 }
 
 /**

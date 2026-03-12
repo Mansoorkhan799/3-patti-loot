@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden">
                 <Image 
-                  src="/3-patti-loot-logo.webp" 
+                  src="/3-patti-loot.webp" 
                   alt="3 Patti Loot Logo - Pakistan Online Gaming App" 
                   width={48}
                   height={48}

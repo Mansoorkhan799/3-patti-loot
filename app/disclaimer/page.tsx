@@ -1,9 +1,9 @@
-import { generateSEO } from "@/lib/seo";
+import { generateSEO, SITE_URL } from "@/lib/seo";
 
 export const metadata = generateSEO({
   title: '3 Patti Loot Disclaimer | Important Legal Information',
   description: '3 Patti Loot disclaimer: Important legal information about online gaming, age restrictions, responsible gaming & terms of use. Read before playing.',
-  url: `${process.env.NEXT_PUBLIC_SITE_URL}/disclaimer`,
+  url: `${SITE_URL}/disclaimer`,
   keywords: [
     '3 patti loot disclaimer',
     'legal information',

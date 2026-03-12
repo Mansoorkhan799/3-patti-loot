@@ -51,6 +51,8 @@ export default function RootLayout({
           `
         }} />
         
+        {/* Favicon / Site Icon */}
+        <link rel="icon" href="/3-patti-loot.webp" type="image/webp" />
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#00FF88" />

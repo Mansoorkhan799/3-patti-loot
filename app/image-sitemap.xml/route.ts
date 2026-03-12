@@ -8,14 +8,19 @@ export async function GET() {
       loc: `${SITE_URL}/`,
       images: [
         {
-          url: `${SITE_URL}/3%20Patti%20Loot.webp`,
-          title: '3 Patti Loot Logo - Pakistan Online Gaming App',
-          caption: '3 Patti Loot official logo - Play Teen Patti, Dragon vs Tiger, Rummy, Slots and 25+ games',
+          url: `${SITE_URL}/3-patti-loot.webp`,
+          title: '3 Patti Loot Pakistan v1.224 - Official App Logo',
+          caption: '3 Patti Loot Pakistan - Free download official APK. Play Teen Patti, Dragon vs Tiger, Rummy, Slots and 25+ games',
         },
         {
           url: `${SITE_URL}/og-image.jpg`,
           title: '3 Patti Loot App Screenshot',
           caption: 'Play and earn real money with 3 Patti Loot gaming app',
+        },
+        {
+          url: `${SITE_URL}/3-patti-loot-game-interface.webp`,
+          title: '3 Patti Loot Game Interface',
+          caption: '3 Patti Loot app game interface - Easy to use design',
         },
         {
           url: `${SITE_URL}/3-patti-loot-refer-and-earn.webp`,
@@ -28,9 +33,29 @@ export async function GET() {
       loc: `${SITE_URL}/about`,
       images: [
         {
-          url: `${SITE_URL}/3%20Patti%20Loot.webp`,
+          url: `${SITE_URL}/3-patti-loot.webp`,
           title: '3 Patti Loot Logo',
-          caption: 'About 3 Patti Loot - Pakistan most trusted gaming platform',
+          caption: 'About 3 Patti Loot Pakistan - Most trusted gaming platform',
+        },
+      ],
+    },
+    {
+      loc: `${SITE_URL}/blog`,
+      images: [
+        {
+          url: `${SITE_URL}/3-patti-loot-account.webp`,
+          title: '3 Patti Loot Account',
+          caption: 'Create account and login to 3 Patti Loot',
+        },
+        {
+          url: `${SITE_URL}/3-patti-loot-add-money.webp`,
+          title: '3 Patti Loot Deposit',
+          caption: 'Deposit money via JazzCash and EasyPaisa',
+        },
+        {
+          url: `${SITE_URL}/3-patti-loot-apk.webp`,
+          title: '3 Patti Loot Games',
+          caption: 'Best 3 Patti games to play - Dragon Tiger, Teen Patti, Rummy',
         },
       ],
     },
@@ -38,7 +63,7 @@ export async function GET() {
       loc: `${SITE_URL}/blog/best-games`,
       images: [
         {
-          url: `${SITE_URL}/3%20Patti%20Loot.webp`,
+          url: `${SITE_URL}/3-patti-loot.webp`,
           title: 'Best 3Patti Games Comparison',
           caption: 'Compare 3 Patti Loot with other gaming apps',
         },

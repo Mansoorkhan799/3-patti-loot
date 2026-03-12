@@ -1,10 +1,10 @@
-import { generateSEO } from "@/lib/seo";
+import { generateSEO, SITE_URL } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = generateSEO({
   title: '3 Patti Loot Terms of Service | User Agreement & Rules',
   description: 'Read 3 Patti Loot terms of service. Understand user agreement, gaming rules, payment terms, account policies & conditions for using our platform.',
-  url: `${process.env.NEXT_PUBLIC_SITE_URL}/terms`,
+  url: `${SITE_URL}/terms`,
   keywords: [
     '3 patti loot terms',
     'terms of service',

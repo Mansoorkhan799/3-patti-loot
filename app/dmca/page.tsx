@@ -1,10 +1,10 @@
-import { generateSEO } from "@/lib/seo";
+import { generateSEO, SITE_URL } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = generateSEO({
   title: '3 Patti Loot DMCA Policy | Copyright Information',
   description: '3 Patti Loot DMCA policy and copyright information. Learn about intellectual property rights, content usage & how to report copyright infringement.',
-  url: `${process.env.NEXT_PUBLIC_SITE_URL}/dmca`,
+  url: `${SITE_URL}/dmca`,
   keywords: [
     '3 patti loot dmca',
     'copyright policy',

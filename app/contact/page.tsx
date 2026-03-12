@@ -1,9 +1,9 @@
-import { generateSEO } from "@/lib/seo";
+import { generateSEO, SITE_URL } from "@/lib/seo";
 
 export const metadata = generateSEO({
   title: 'Contact 3 Patti Loot Support | 24/7 Customer Service',
   description: 'Contact 3 Patti Loot customer support team. Get help with account issues, withdrawals, deposits & technical problems. 24/7 support available in English & Urdu.',
-  url: `${process.env.NEXT_PUBLIC_SITE_URL}/contact`,
+  url: `${SITE_URL}/contact`,
   keywords: [
     '3 patti loot contact',
     '3 patti loot support',

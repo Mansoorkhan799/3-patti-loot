@@ -59,10 +59,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts with specific dates for better indexing
   const blogPosts = [
-    { slug: 'signup-login', date: '2026-12-01' },
-    { slug: 'deposit-withdraw', date: '2026-12-05' },
-    { slug: 'tips-tricks', date: '2026-12-10' },
-    { slug: 'best-games', date: '2026-12-15' },
+    { slug: 'signup-login', date: '2026-03-01' },
+    { slug: 'deposit-withdraw', date: '2026-03-05' },
+    { slug: 'tips-tricks', date: '2026-03-10' },
+    { slug: 'best-games', date: '2026-03-15' },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({

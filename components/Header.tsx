@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2 group" onClick={closeMobileMenu}>
             <div className="w-12 h-12 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform overflow-hidden">
               <Image 
-                src="/3-patti-loot-logo.webp" 
+                src="/3-patti-loot.webp" 
                 alt="3 Patti Loot Logo - Pakistan Online Gaming App" 
                 width={48}
                 height={48}

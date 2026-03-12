@@ -1,10 +1,10 @@
-import { generateSEO, generateArticleSchema, generateBreadcrumbSchema } from "@/lib/seo";
+import { generateSEO, generateArticleSchema, generateBreadcrumbSchema, SITE_URL } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = generateSEO({
   title: '3 Patti Loot Signup & Login Guide | Create Account in 2 Minutes',
   description: 'Complete guide to signup and login in 3 Patti Loot APK. Learn how to create account, bind email, recover password, and secure your gaming account. Easy step-by-step tutorial.',
-  url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog/signup-login`,
+  url: `${SITE_URL}/blog/signup-login`,
   keywords: [
     '3 patti loot signup',
     '3 patti loot login',
@@ -18,23 +18,23 @@ export const metadata = generateSEO({
 export default function SignupLoginGuidePage() {
   // Breadcrumb Schema
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://3pattilootapk.com.pk'}` },
-    { name: 'Blog', url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://3pattilootapk.com.pk'}/blog` },
-    { name: 'Signup & Login Guide', url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://3pattilootapk.com.pk'}/blog/signup-login` },
+    { name: 'Home', url: SITE_URL },
+    { name: 'Blog', url: `${SITE_URL}/blog` },
+    { name: 'Signup & Login Guide', url: `${SITE_URL}/blog/signup-login` },
   ]);
 
   // Article Schema
   const articleSchema = generateArticleSchema({
     title: '3 Patti Loot Signup & Login Guide | Create Account in 2 Minutes',
     description: 'Complete guide to signup and login in 3 Patti Loot APK.',
-    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://3pattilootapk.com.pk'}/3-patti-loot-logo.webp`,
+    image: `${SITE_URL}/3-patti-loot-logo.webp`,
     datePublished: '2026-12-15',
     dateModified: '2026-12-15',
     author: {
       name: '3 Patti Loot Team',
-      url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://3pattilootapk.com.pk'}/about`,
+      url: `${SITE_URL}/about`,
     },
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://3pattilootapk.com.pk'}/blog/signup-login`,
+    url: `${SITE_URL}/blog/signup-login`,
   });
 
   return (

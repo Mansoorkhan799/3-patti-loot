@@ -8,25 +8,25 @@ export async function GET() {
     {
       slug: 'signup-login',
       title: 'How to Signup and Login in 3 Patti Loot',
-      date: '2026-12-01',
+      date: '2026-03-01',
       priority: 0.8,
     },
     {
       slug: 'deposit-withdraw',
       title: 'How to Deposit and Withdraw Money',
-      date: '2026-12-05',
+      date: '2026-03-05',
       priority: 0.8,
     },
     {
       slug: 'tips-tricks',
       title: 'Best Tips and Tricks to Win Big',
-      date: '2026-12-10',
+      date: '2026-03-10',
       priority: 0.8,
     },
     {
       slug: 'best-games',
       title: 'Best 3Patti Games to Play',
-      date: '2026-12-15',
+      date: '2026-03-15',
       priority: 0.8,
     },
   ];

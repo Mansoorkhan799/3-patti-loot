@@ -1,9 +1,9 @@
-import { generateSEO } from "@/lib/seo";
+import { generateSEO, SITE_URL } from "@/lib/seo";
 
 export const metadata = generateSEO({
   title: '3 Patti Loot Privacy Policy | Your Data Security & Privacy',
   description: 'Read 3 Patti Loot privacy policy. Learn how we protect your personal information, payment data & gaming activity. Your privacy is our priority.',
-  url: `${process.env.NEXT_PUBLIC_SITE_URL}/privacy-policy`,
+  url: `${SITE_URL}/privacy-policy`,
   keywords: [
     '3 patti loot privacy',
     'data security',

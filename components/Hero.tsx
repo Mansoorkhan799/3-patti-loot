@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <section className="relative py-20 px-4 overflow-hidden" style={{ contain: 'layout style paint' }}>
@@ -12,66 +14,39 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative max-w-7xl mx-auto text-center">
-        <div className="inline-block mb-4 px-4 py-2 bg-gaming-accent/20 border border-gaming-accent/40 rounded-full">
-          <span className="text-gaming-accent font-bold">🎁 Get 100% Deposit Bonus!</span>
+        <div className="mb-6 flex justify-center">
+          <Image src="/3-patti-loot.webp" alt="3Patti Loot Logo" width={120} height={120} className="object-contain" priority />
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-gaming font-bold mb-6 animated-gradient">
-          3 Patti Loot Game Download
+        <h1 className="text-5xl md:text-7xl font-gaming font-bold mb-4 animated-gradient">
+          3 Patti Loot
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-          New Earning App in Pakistan 2026 with attractive design, fun background music, and engaging look. 
-          Play Teen Patti, Dragon vs Tiger, Rummy, Slots, and more exciting games!
+        <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto font-semibold">
+          Pakistan&apos;s Most Trusted 3 Patti Gaming Platform 2026
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-          <a href="https://3pattilootpkk1.com?from_gameid=5208127&channelCode=200000" className="btn-primary text-lg px-8 py-4">
-            📱 Download APK Now
-          </a>
-          <a href="#games" className="btn-secondary text-lg px-8 py-4">
-            🎮 View All Games
-          </a>
-        </div>
-        
-        <div className="flex items-center justify-center gap-6 text-sm text-gray-400 mb-12">
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-gaming-accent" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-            </svg>
-            <span>Instant Withdrawal</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-gaming-accent" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-            </svg>
-            <span>100% Safe & Secure</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 text-gaming-accent" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-            </svg>
-            <span>24/7 Support</span>
-          </div>
-        </div>
+        <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+          3Patti Loot is an exciting online card game where you can enjoy a wide collection of casino games with its attractive design, fun background music, and engaging look. Click on following download button to get this wonderful app.
+        </p>
+        <a href="https://3pattilootpkk1.com?from_gameid=5208127&channelCode=200000" className="btn-primary text-lg px-10 py-4 inline-block mb-8">
+          DOWNLOAD NOW
+        </a>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-          <div className="glass rounded-lg p-6">
-            <div className="text-3xl font-gaming font-bold text-gaming-accent mb-2">25+</div>
-            <div className="text-gray-400 text-sm">Casino Games</div>
-          </div>
-          <div className="glass rounded-lg p-6">
-            <div className="text-3xl font-gaming font-bold text-gaming-accent mb-2">600K+</div>
+        <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-4">
+          <div className="glass rounded-lg p-4">
+            <div className="text-2xl font-gaming font-bold text-gaming-accent">600K+</div>
             <div className="text-gray-400 text-sm">Downloads</div>
           </div>
-          <div className="glass rounded-lg p-6">
-            <div className="text-3xl font-gaming font-bold text-gaming-accent mb-2">24/7</div>
-            <div className="text-gray-400 text-sm">Available</div>
+          <div className="glass rounded-lg p-4">
+            <div className="text-2xl font-gaming font-bold text-gaming-accent">300K+</div>
+            <div className="text-gray-400 text-sm">Ratings</div>
           </div>
-          <div className="glass rounded-lg p-6">
-            <div className="text-3xl font-gaming font-bold text-gaming-accent mb-2">100%</div>
-            <div className="text-gray-400 text-sm">Deposit Bonus</div>
+          <div className="glass rounded-lg p-4">
+            <div className="text-2xl font-gaming font-bold text-gaming-accent">49MB</div>
+            <div className="text-gray-400 text-sm">App Size</div>
           </div>
         </div>
+        <p className="text-sm text-gray-500">*Available for Android devices only</p>
       </div>
     </section>
   );

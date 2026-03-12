@@ -1,10 +1,10 @@
-import { generateSEO } from "@/lib/seo";
+import { generateSEO, generateBreadcrumbSchema, SITE_URL } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = generateSEO({
   title: '3 Patti Loot Tips & Tricks 2026 | Win Big with These Strategies',
   description: 'Master 3 Patti Loot with expert tips and tricks. Learn winning strategies for Teen Patti, Rummy, Andar Bahar & Dragon Tiger. Bankroll management, game-specific tactics & pro tips.',
-  url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog/tips-tricks`,
+  url: `${SITE_URL}/blog/tips-tricks`,
   keywords: [
     '3 patti loot tips',
     '3 patti loot tricks',
@@ -16,16 +16,30 @@ export const metadata = generateSEO({
 });
 
 export default function TipsTricksPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: SITE_URL },
+    { name: 'Blog', url: `${SITE_URL}/blog` },
+    { name: 'Tips & Tricks', url: `${SITE_URL}/blog/tips-tricks` },
+  ]);
+
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Header */}
       <section className="py-16 px-4 bg-gradient-to-r from-gaming-accent/10 to-gaming-purple/10">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-4">
-            <Link href="/blog" className="text-gaming-accent hover:text-gaming-purple transition-colors">
-              ← Back to Blog
-            </Link>
-          </div>
+          <nav className="mb-6 text-sm">
+            <ol className="flex items-center gap-2 text-gray-400">
+              <li><Link href="/" className="hover:text-gaming-accent transition-colors">Home</Link></li>
+              <li>→</li>
+              <li><Link href="/blog" className="hover:text-gaming-accent transition-colors">Guides</Link></li>
+              <li>→</li>
+              <li className="text-white">Tips & Tricks</li>
+            </ol>
+          </nav>
           <h1 className="text-5xl font-gaming font-bold mb-4 gradient-text">
             🎯 Best Tips and Tricks to Win Big
           </h1>

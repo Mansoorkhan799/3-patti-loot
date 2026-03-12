@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { generateSEO } from '@/lib/seo';
+import { generateSEO, SITE_URL } from '@/lib/seo';
 
 export const metadata = generateSEO({
   title: 'Offline - 3 Patti Loot',
   description: 'You are currently offline. Please check your internet connection.',
+  url: `${SITE_URL}/offline`,
   noindex: true,
 });
 

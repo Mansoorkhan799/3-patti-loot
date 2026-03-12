@@ -1,10 +1,10 @@
-import { generateSEO } from "@/lib/seo";
+import { generateSEO, generateBreadcrumbSchema, SITE_URL } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = generateSEO({
   title: '3 Patti Loot Deposit & Withdraw Guide | JazzCash & EasyPaisa',
   description: 'Learn how to deposit and withdraw money in 3 Patti Loot using JazzCash & EasyPaisa. Instant withdrawals, minimum PKR 100. Complete guide with screenshots and troubleshooting tips.',
-  url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog/deposit-withdraw`,
+  url: `${SITE_URL}/blog/deposit-withdraw`,
   keywords: [
     '3 patti loot withdrawal',
     '3 patti loot deposit',
@@ -16,8 +16,18 @@ export const metadata = generateSEO({
 });
 
 export default function DepositWithdrawGuidePage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: SITE_URL },
+    { name: 'Blog', url: `${SITE_URL}/blog` },
+    { name: 'Deposit & Withdraw Guide', url: `${SITE_URL}/blog/deposit-withdraw` },
+  ]);
+
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Header */}
       <section className="py-16 px-4 bg-gradient-to-r from-gaming-accent/10 to-gaming-purple/10">
         <div className="max-w-7xl mx-auto">
