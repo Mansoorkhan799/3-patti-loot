@@ -157,7 +157,7 @@ export function generateArticleSchema(data: {
       name: SITE_NAME,
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/logo.png`,
+        url: `${SITE_URL}/3-patti-loot.webp`,
       },
     },
     mainEntityOfPage: {
@@ -177,14 +177,6 @@ export function generateWebsiteSchema() {
     name: SITE_NAME,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
   };
 }
 
@@ -199,8 +191,8 @@ export function generateOrganizationSchema() {
     alternateName: 'Teen Patti Loot',
     description: SITE_DESCRIPTION,
     url: SITE_URL,
-    logo: `${SITE_URL}/3 Patti Loot.webp`,
-    image: `${SITE_URL}/3 Patti Loot.webp`,
+    logo: `${SITE_URL}/3-patti-loot.webp`,
+    image: `${SITE_URL}/3-patti-loot.webp`,
     sameAs: [
       'https://www.facebook.com/people/3-Patti-Loot/61564386613680/',
       'https://x.com/3pattiloot',
@@ -343,8 +335,8 @@ export function generateMobileAppSchema() {
     softwareVersion: 'V1.199(1)',
     fileSize: '49MB',
     installUrl: 'https://3pattilootpkk1.com?from_gameid=5208127&channelCode=200000',
-    screenshot: `${SITE_URL}/3 Patti Loot.webp`,
-    image: `${SITE_URL}/3 Patti Loot.webp`,
+    screenshot: `${SITE_URL}/3-patti-loot.webp`,
+    image: `${SITE_URL}/3-patti-loot.webp`,
     inLanguage: ['en', 'ur'],
     countriesSupported: 'PK',
   };
@@ -447,10 +439,10 @@ export function generateSoftwareAppSchema() {
     fileSize: '49MB',
     installUrl: 'https://3pattilootpkk1.com?from_gameid=5208127&channelCode=200000',
     screenshot: [
-      `${SITE_URL}/3 Patti Loot.webp`,
-      `${SITE_URL}/3patti-loot.webp`,
+      `${SITE_URL}/3-patti-loot.webp`,
+      `${SITE_URL}/3-patti-loot-apk.webp`,
     ],
-    image: `${SITE_URL}/3 Patti Loot.webp`,
+    image: `${SITE_URL}/3-patti-loot.webp`,
     inLanguage: ['en', 'ur'],
     countriesSupported: 'PK',
     datePublished: '2024-01-01',

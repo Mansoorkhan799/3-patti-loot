@@ -8,10 +8,7 @@ const PRECACHE_ASSETS = [
   '/about',
   '/contact',
   '/blog',
-  '/3 Patti Loot.webp',
-  '/3patti-loot.webp',
-  '/icon.webp',
-  '/apple-icon.webp',
+  '/3-patti-loot.webp',
   '/manifest.json',
 ];
 

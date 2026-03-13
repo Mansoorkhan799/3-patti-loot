@@ -287,7 +287,7 @@ export function generateNewsArticleSchema(data: {
       name: '3 Patti Loot',
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/3-patti-loot-logo.webp`,
+        url: `${SITE_URL}/3-patti-loot.webp`,
       },
     },
     mainEntityOfPage: {

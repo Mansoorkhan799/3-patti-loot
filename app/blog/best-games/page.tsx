@@ -1,4 +1,4 @@
-import { generateSEO, generateBreadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { generateSEO, generateArticleSchema, generateBreadcrumbSchema, SITE_URL } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = generateSEO({
@@ -22,11 +22,25 @@ export default function BestGamesPage() {
     { name: 'Best 3 Patti Games', url: `${SITE_URL}/blog/best-games` },
   ]);
 
+  const articleSchema = generateArticleSchema({
+    title: 'Best 3 Patti Games 2026 | Compare Blue, Lucky, Sky, Vegas & Loot',
+    description: 'Complete comparison of best 3 Patti games in Pakistan: 3 Patti Loot, Blue, Lucky, Sky & Vegas. See ratings, features, bonuses, withdrawal times.',
+    image: `${SITE_URL}/3-patti-loot.webp`,
+    datePublished: '2026-01-15',
+    dateModified: '2026-01-15',
+    author: { name: '3 Patti Loot Team', url: `${SITE_URL}/about` },
+    url: `${SITE_URL}/blog/best-games`,
+  });
+
   return (
     <div className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       {/* Header */}
       <section className="py-16 px-4 bg-gradient-to-r from-gaming-accent/10 to-gaming-purple/10">

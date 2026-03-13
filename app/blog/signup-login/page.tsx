@@ -27,7 +27,7 @@ export default function SignupLoginGuidePage() {
   const articleSchema = generateArticleSchema({
     title: '3 Patti Loot Signup & Login Guide | Create Account in 2 Minutes',
     description: 'Complete guide to signup and login in 3 Patti Loot APK.',
-    image: `${SITE_URL}/3-patti-loot-logo.webp`,
+    image: `${SITE_URL}/3-patti-loot.webp`,
     datePublished: '2026-12-15',
     dateModified: '2026-12-15',
     author: {

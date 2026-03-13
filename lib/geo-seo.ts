@@ -263,7 +263,7 @@ export function getQuickIndexingData() {
         '@id': `${process.env.NEXT_PUBLIC_SITE_URL}/#organization`,
         name: '3 Patti Loot',
         url: process.env.NEXT_PUBLIC_SITE_URL,
-        logo: `${process.env.NEXT_PUBLIC_SITE_URL}/3-patti-loot-logo.webp`,
+        logo: `${process.env.NEXT_PUBLIC_SITE_URL}/3-patti-loot.webp`,
         areaServed: 'Pakistan',
       },
     ],

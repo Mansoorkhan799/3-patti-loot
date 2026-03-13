@@ -1,4 +1,4 @@
-import { generateSEO, generateBreadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { generateSEO, generateArticleSchema, generateBreadcrumbSchema, SITE_URL } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = generateSEO({
@@ -22,11 +22,25 @@ export default function TipsTricksPage() {
     { name: 'Tips & Tricks', url: `${SITE_URL}/blog/tips-tricks` },
   ]);
 
+  const articleSchema = generateArticleSchema({
+    title: '3 Patti Loot Tips & Tricks 2026 | Win Big with These Strategies',
+    description: 'Master 3 Patti Loot with expert tips and tricks. Learn winning strategies for Teen Patti, Rummy, Andar Bahar & Dragon Tiger.',
+    image: `${SITE_URL}/3-patti-loot.webp`,
+    datePublished: '2026-01-15',
+    dateModified: '2026-01-15',
+    author: { name: '3 Patti Loot Team', url: `${SITE_URL}/about` },
+    url: `${SITE_URL}/blog/tips-tricks`,
+  });
+
   return (
     <div className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       {/* Header */}
       <section className="py-16 px-4 bg-gradient-to-r from-gaming-accent/10 to-gaming-purple/10">

@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
-import { generateSEO } from "@/lib/seo";
+import { generateSEO, generateFAQSchema } from "@/lib/seo";
 
 // Lazy load Hero component to reduce initial bundle size
 const Hero = dynamic(() => import("@/components/Hero"), {
@@ -26,6 +26,17 @@ export const metadata = generateSEO({
   ],
 });
 
+const HOMEPAGE_FAQS = [
+  { question: "Can users play 3 Patti Loot without depositing money?", answer: "Yes, you can play games in 3 Patti Loot by using the free bonuses like the Welcome Bonus and Referral Commission." },
+  { question: "How do users contact customer support?", answer: "You can contact the 3 Patti Loot support team through live chat, WhatsApp, or other social media platforms." },
+  { question: "What makes 3 Patti Loot different from other card games?", answer: "Its simple design, fast transactions, and exciting games make this platform more enjoyable than other apps." },
+  { question: "Is 3 Patti Loot safe and legal to use?", answer: "Yes, it is safe to use because this makes sure that your data privacy stays secure. However, the legality depends on your local laws, so always check your region's rules." },
+  { question: "Can users lose money while playing?", answer: "Yes, this app is involved with real money, so you might lose some amount if you do not play the games carefully. So, always play wisely and set a limit while playing." },
+  { question: "Is it possible to change the language of 3 Patti Loot?", answer: "Yes, it is possible because this app supports multiple languages, so you can change the language from the settings menu easily." },
+  { question: "How do referral rewards work?", answer: "When you share your referral link with others, or when someone joins this app through your link, you can receive a commission." },
+  { question: "Is 3 Patti Loot available on iPhone (iOS)?", answer: "This app is mainly available for Android devices, but you can also check the official website or store for updates about iOS availability." },
+];
+
 export default function HomePage() {
 
   const multiplayerGames = [
@@ -43,8 +54,14 @@ export default function HomePage() {
     "Video Poker 1, 2", "Wild Energy", "WoW Slot", "God of Fortune"
   ];
 
+  const faqSchema = generateFAQSchema(HOMEPAGE_FAQS);
+
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <Hero />
 

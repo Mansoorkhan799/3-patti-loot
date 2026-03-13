@@ -13,11 +13,6 @@ export async function GET() {
           caption: '3 Patti Loot Pakistan - Free download official APK. Play Teen Patti, Dragon vs Tiger, Rummy, Slots and 25+ games',
         },
         {
-          url: `${SITE_URL}/og-image.jpg`,
-          title: '3 Patti Loot App Screenshot',
-          caption: 'Play and earn real money with 3 Patti Loot gaming app',
-        },
-        {
           url: `${SITE_URL}/3-patti-loot-game-interface.webp`,
           title: '3 Patti Loot Game Interface',
           caption: '3 Patti Loot app game interface - Easy to use design',
