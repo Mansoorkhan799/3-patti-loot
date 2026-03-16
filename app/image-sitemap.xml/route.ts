@@ -9,8 +9,8 @@ export async function GET() {
       images: [
         {
           url: `${SITE_URL}/3-patti-loot.webp`,
-          title: '3 Patti Loot Pakistan v1.224 - Official App Logo',
-          caption: '3 Patti Loot Pakistan - Free download official APK. Play Teen Patti, Dragon vs Tiger, Rummy, Slots and 25+ games',
+          title: '3 Patti Loot - Official Logo | Pakistan Card Game APK Download',
+          caption: '3 Patti Loot official logo and app icon. Download 3 Patti Loot APK free for Android - Teen Patti, Rummy, Dragon vs Tiger, Slots. JazzCash & EasyPaisa.',
         },
         {
           url: `${SITE_URL}/3-patti-loot-game-interface.webp`,
@@ -29,8 +29,8 @@ export async function GET() {
       images: [
         {
           url: `${SITE_URL}/3-patti-loot.webp`,
-          title: '3 Patti Loot Logo',
-          caption: 'About 3 Patti Loot Pakistan - Most trusted gaming platform',
+          title: '3 Patti Loot Logo - Official App Icon',
+          caption: '3 Patti Loot logo - Pakistan gaming app. Teen Patti, Rummy, card games. Free download.',
         },
       ],
     },
@@ -59,8 +59,38 @@ export async function GET() {
       images: [
         {
           url: `${SITE_URL}/3-patti-loot.webp`,
-          title: 'Best 3Patti Games Comparison',
-          caption: 'Compare 3 Patti Loot with other gaming apps',
+          title: '3 Patti Loot - Best 3 Patti Games Comparison',
+          caption: '3 Patti Loot vs other apps. Compare Teen Patti, Rummy, Dragon Tiger games in Pakistan.',
+        },
+      ],
+    },
+    {
+      loc: `${SITE_URL}/blog/signup-login`,
+      images: [
+        {
+          url: `${SITE_URL}/3-patti-loot.webp`,
+          title: '3 Patti Loot Signup and Login Guide',
+          caption: '3 Patti Loot - Create account, login, bind email. Official APK download.',
+        },
+      ],
+    },
+    {
+      loc: `${SITE_URL}/blog/deposit-withdraw`,
+      images: [
+        {
+          url: `${SITE_URL}/3-patti-loot.webp`,
+          title: '3 Patti Loot Deposit and Withdraw',
+          caption: '3 Patti Loot - JazzCash, EasyPaisa deposits and withdrawals. Pakistan gaming app.',
+        },
+      ],
+    },
+    {
+      loc: `${SITE_URL}/blog/tips-tricks`,
+      images: [
+        {
+          url: `${SITE_URL}/3-patti-loot.webp`,
+          title: '3 Patti Loot Tips and Tricks',
+          caption: '3 Patti Loot winning strategies - Teen Patti, Rummy, Andar Bahar. Pakistan card game.',
         },
       ],
     },

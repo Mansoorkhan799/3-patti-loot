@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
-import { generateSEO, generateFAQSchema } from "@/lib/seo";
+import { generateSEO, generateFAQSchema, generateImageObjectSchema, SITE_URL } from "@/lib/seo";
 
 // Lazy load Hero component to reduce initial bundle size
 const Hero = dynamic(() => import("@/components/Hero"), {
@@ -55,12 +55,21 @@ export default function HomePage() {
   ];
 
   const faqSchema = generateFAQSchema(HOMEPAGE_FAQS);
+  const logoImageSchema = generateImageObjectSchema({
+    url: `${SITE_URL}/3-patti-loot.webp`,
+    name: '3 Patti Loot - Official App Logo',
+    description: '3 Patti Loot official logo and app icon. Pakistan\'s most trusted 3 Patti gaming platform - Teen Patti, Rummy, Dragon vs Tiger, Slots. Free APK download.',
+  });
 
   return (
     <div className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(logoImageSchema) }}
       />
       {/* Hero Section */}
       <Hero />

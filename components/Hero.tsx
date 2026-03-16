@@ -14,9 +14,17 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative max-w-7xl mx-auto text-center">
-        <div className="mb-6 flex justify-center">
-          <Image src="/3-patti-loot.webp" alt="3Patti Loot Logo" width={120} height={120} className="object-contain" priority />
-        </div>
+        <figure className="mb-6 flex flex-col items-center">
+          <Image
+            src="/3-patti-loot.webp"
+            alt="3 Patti Loot - Official Logo and App Icon | Pakistan Card Game APK Download"
+            width={200}
+            height={200}
+            className="object-contain"
+            priority
+          />
+          <figcaption className="sr-only">3 Patti Loot official logo - Pakistan&apos;s most trusted Teen Patti and card game app. Free APK download with JazzCash and EasyPaisa.</figcaption>
+        </figure>
         
         <h1 className="text-5xl md:text-7xl font-gaming font-bold mb-4 animated-gradient">
           3 Patti Loot

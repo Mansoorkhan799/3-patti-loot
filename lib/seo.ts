@@ -286,6 +286,25 @@ export function getReadingTime(content: string): number {
 }
 
 /**
+ * Generate JSON-LD for ImageObject (helps Google Image search)
+ */
+export function generateImageObjectSchema(data: {
+  url: string;
+  name: string;
+  description?: string;
+  contentUrl?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    url: data.url,
+    name: data.name,
+    ...(data.description && { description: data.description }),
+    ...(data.contentUrl && { contentUrl: data.contentUrl }),
+  };
+}
+
+/**
  * Generate JSON-LD structured data for FAQPage
  */
 export function generateFAQSchema(faqs: Array<{ question: string; answer: string }>) {
