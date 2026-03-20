@@ -1,10 +1,11 @@
-import { generateSEO, generateArticleSchema, generateBreadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { generateSEO, generateArticleSchema, generateBreadcrumbSchema, SITE_URL, BLOG_FEATURED_IMAGE_URL } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = generateSEO({
   title: '3 Patti Loot Deposit & Withdraw Guide | JazzCash & EasyPaisa',
   description: 'Learn how to deposit and withdraw money in 3 Patti Loot using JazzCash & EasyPaisa. Instant withdrawals, minimum PKR 100. Complete guide with screenshots and troubleshooting tips.',
   url: `${SITE_URL}/blog/deposit-withdraw`,
+  image: BLOG_FEATURED_IMAGE_URL,
   keywords: [
     '3 patti loot withdrawal',
     '3 patti loot deposit',
@@ -25,7 +26,7 @@ export default function DepositWithdrawGuidePage() {
   const articleSchema = generateArticleSchema({
     title: '3 Patti Loot Deposit & Withdraw Guide | JazzCash & EasyPaisa',
     description: 'Learn how to deposit and withdraw money in 3 Patti Loot using JazzCash & EasyPaisa. Instant withdrawals, minimum PKR 100. Complete guide with screenshots and troubleshooting tips.',
-    image: `${SITE_URL}/3-patti-loot.webp`,
+    image: BLOG_FEATURED_IMAGE_URL,
     datePublished: '2026-01-15',
     dateModified: '2026-01-15',
     author: { name: '3 Patti Loot Team', url: `${SITE_URL}/about` },

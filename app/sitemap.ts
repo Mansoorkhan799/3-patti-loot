@@ -63,6 +63,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'deposit-withdraw', date: '2026-03-05' },
     { slug: 'tips-tricks', date: '2026-03-10' },
     { slug: 'best-games', date: '2026-03-15' },
+    { slug: 'real-or-fake', date: '2026-03-18' },
+    { slug: 'install-apk-safely', date: '2026-03-20' },
+    { slug: 'earn-money', date: '2026-03-22' },
+    { slug: 'features-benefits', date: '2026-03-24' },
+    { slug: 'payment-methods-jazzcash-easypaisa', date: '2026-03-26' },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({

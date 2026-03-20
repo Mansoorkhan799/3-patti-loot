@@ -38,19 +38,9 @@ export async function GET() {
       loc: `${SITE_URL}/blog`,
       images: [
         {
-          url: `${SITE_URL}/3-patti-loot-account.webp`,
-          title: '3 Patti Loot Account',
-          caption: 'Create account and login to 3 Patti Loot',
-        },
-        {
-          url: `${SITE_URL}/3-patti-loot-add-money.webp`,
-          title: '3 Patti Loot Deposit',
-          caption: 'Deposit money via JazzCash and EasyPaisa',
-        },
-        {
-          url: `${SITE_URL}/3-patti-loot-apk.webp`,
-          title: '3 Patti Loot Games',
-          caption: 'Best 3 Patti games to play - Dragon Tiger, Teen Patti, Rummy',
+          url: `${SITE_URL}/3-patti-loot.webp`,
+          title: '3 Patti Loot Blog — All Guides',
+          caption: '3 Patti Loot official featured image for blog guides Pakistan',
         },
       ],
     },
@@ -91,6 +81,56 @@ export async function GET() {
           url: `${SITE_URL}/3-patti-loot.webp`,
           title: '3 Patti Loot Tips and Tricks',
           caption: '3 Patti Loot winning strategies - Teen Patti, Rummy, Andar Bahar. Pakistan card game.',
+        },
+      ],
+    },
+    {
+      loc: `${SITE_URL}/blog/real-or-fake`,
+      images: [
+        {
+          url: `${SITE_URL}/3-patti-loot.webp`,
+          title: 'Is 3 Patti Loot Real or Fake',
+          caption: '3 Patti Loot legitimacy guide - JazzCash EasyPaisa fake APK Pakistan',
+        },
+      ],
+    },
+    {
+      loc: `${SITE_URL}/blog/install-apk-safely`,
+      images: [
+        {
+          url: `${SITE_URL}/3-patti-loot.webp`,
+          title: 'Install 3 Patti Loot APK Safely',
+          caption: '3 Patti Loot safe Android install unknown sources Pakistan',
+        },
+      ],
+    },
+    {
+      loc: `${SITE_URL}/blog/earn-money`,
+      images: [
+        {
+          url: `${SITE_URL}/3-patti-loot.webp`,
+          title: 'How to Earn Money in 3 Patti Loot',
+          caption: '3 Patti Loot earn money guide — official featured image',
+        },
+      ],
+    },
+    {
+      loc: `${SITE_URL}/blog/features-benefits`,
+      images: [
+        {
+          url: `${SITE_URL}/3-patti-loot.webp`,
+          title: '3 Patti Loot Features and Benefits',
+          caption: '3 Patti Loot app features — official featured image',
+        },
+      ],
+    },
+    {
+      loc: `${SITE_URL}/blog/payment-methods-jazzcash-easypaisa`,
+      images: [
+        {
+          url: `${SITE_URL}/3-patti-loot.webp`,
+          title: '3 Patti Loot JazzCash EasyPaisa',
+          caption: '3 Patti Loot payment methods — official featured image',
         },
       ],
     },

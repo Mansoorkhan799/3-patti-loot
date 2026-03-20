@@ -1,10 +1,11 @@
-import { generateSEO, generateArticleSchema, generateBreadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { generateSEO, generateArticleSchema, generateBreadcrumbSchema, SITE_URL, BLOG_FEATURED_IMAGE_URL } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = generateSEO({
   title: '3 Patti Loot Signup & Login Guide | Create Account in 2 Minutes',
   description: 'Complete guide to signup and login in 3 Patti Loot APK. Learn how to create account, bind email, recover password, and secure your gaming account. Easy step-by-step tutorial.',
   url: `${SITE_URL}/blog/signup-login`,
+  image: BLOG_FEATURED_IMAGE_URL,
   keywords: [
     '3 patti loot signup',
     '3 patti loot login',
@@ -27,7 +28,7 @@ export default function SignupLoginGuidePage() {
   const articleSchema = generateArticleSchema({
     title: '3 Patti Loot Signup & Login Guide | Create Account in 2 Minutes',
     description: 'Complete guide to signup and login in 3 Patti Loot APK.',
-    image: `${SITE_URL}/3-patti-loot.webp`,
+    image: BLOG_FEATURED_IMAGE_URL,
     datePublished: '2026-12-15',
     dateModified: '2026-12-15',
     author: {

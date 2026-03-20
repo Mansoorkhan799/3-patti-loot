@@ -2,6 +2,11 @@
 import { Metadata } from 'next';
 
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://3pattilootapk.com.pk';
+
+/** Default featured image for all blog posts (cards, Open Graph, Article schema) */
+export const BLOG_FEATURED_IMAGE_PATH = '/3-patti-loot.webp';
+export const BLOG_FEATURED_IMAGE_URL = `${SITE_URL}/3-patti-loot.webp`;
+
 const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || '3 Patti Loot';
 const SITE_DESCRIPTION = process.env.NEXT_PUBLIC_SITE_DESCRIPTION || 
   "Download 3 Patti Loot APK - New Earning App in Pakistan 2026. Play Teen Patti, Dragon vs Tiger, Rummy, Slots and 25+ games with attractive design. Earn real money with instant withdrawals via JazzCash & EasyPaisa. Get 100% deposit bonus!";
@@ -26,7 +31,7 @@ interface SEOProps {
 export function generateSEO({
   title,
   description = SITE_DESCRIPTION,
-  image = `${SITE_URL}/og-image.jpg`,
+  image = `${SITE_URL}/3-patti-loot.webp`,
   url = SITE_URL,
   type = 'website',
   publishedTime,

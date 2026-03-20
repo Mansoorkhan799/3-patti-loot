@@ -29,6 +29,36 @@ export async function GET() {
       date: '2026-03-15',
       priority: 0.8,
     },
+    {
+      slug: 'real-or-fake',
+      title: 'Is 3 Patti Loot Real or Fake?',
+      date: '2026-03-18',
+      priority: 0.85,
+    },
+    {
+      slug: 'install-apk-safely',
+      title: 'How to Install 3 Patti Loot APK Safely',
+      date: '2026-03-20',
+      priority: 0.85,
+    },
+    {
+      slug: 'earn-money',
+      title: 'How to Earn Money in 3 Patti Loot',
+      date: '2026-03-22',
+      priority: 0.85,
+    },
+    {
+      slug: 'features-benefits',
+      title: '3 Patti Loot App Features and Benefits',
+      date: '2026-03-24',
+      priority: 0.85,
+    },
+    {
+      slug: 'payment-methods-jazzcash-easypaisa',
+      title: '3 Patti Loot Payment Methods JazzCash EasyPaisa',
+      date: '2026-03-26',
+      priority: 0.85,
+    },
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

@@ -1,4 +1,4 @@
-import { generateSEO, generateBreadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { generateSEO, generateBreadcrumbSchema, SITE_URL, BLOG_FEATURED_IMAGE_PATH, BLOG_FEATURED_IMAGE_URL } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -6,6 +6,7 @@ export const metadata = generateSEO({
   title: '3 Patti Loot Blog | Guides, Tips & Latest Updates',
   description: 'Read expert guides on 3 Patti Loot: signup tutorials, deposit/withdrawal guides, winning tips & tricks, game comparisons. Stay updated with latest features and bonuses.',
   url: `${SITE_URL}/blog`,
+  image: BLOG_FEATURED_IMAGE_URL,
   keywords: [
     '3 patti loot blog',
     '3 patti loot guides',
@@ -15,44 +16,80 @@ export const metadata = generateSEO({
   ],
 });
 
-// Static blog posts
+// Static blog posts (newest first in grid order)
 const blogPosts = [
+  {
+    id: 9,
+    title: "3 Patti Loot Payment Methods — JazzCash & EasyPaisa",
+    slug: "blog/payment-methods-jazzcash-easypaisa",
+    excerpt: "Compare JazzCash vs EasyPaisa for 3 Patti Loot deposits and withdrawals in Pakistan.",
+    category: "Payments",
+    date: "March 26, 2026",
+  },
+  {
+    id: 8,
+    title: "3 Patti Loot App Features and Benefits",
+    slug: "blog/features-benefits",
+    excerpt: "Games list, wallet support, bonuses, and why players choose the 3 Patti Loot APK.",
+    category: "Overview",
+    date: "March 24, 2026",
+  },
+  {
+    id: 7,
+    title: "How to Earn Money in 3 Patti Loot?",
+    slug: "blog/earn-money",
+    excerpt: "Welcome bonus, referrals, daily rewards, and realistic expectations for earning PKR.",
+    category: "Earning",
+    date: "March 22, 2026",
+  },
+  {
+    id: 6,
+    title: "How to Install 3 Patti Loot APK Safely on Android",
+    slug: "blog/install-apk-safely",
+    excerpt: "Enable unknown sources safely, check APK permissions, and avoid fake installers before you play.",
+    category: "Safety",
+    date: "March 20, 2026",
+  },
+  {
+    id: 5,
+    title: "Is 3 Patti Loot Real or Fake?",
+    slug: "blog/real-or-fake",
+    excerpt: "Honest look at legitimacy, JazzCash/EasyPaisa withdrawals, and how to spot scam APKs in Pakistan.",
+    category: "Trust & Safety",
+    date: "March 18, 2026",
+  },
   {
     id: 1,
     title: "How to Signup and Login in 3 Patti Loot",
     slug: "blog/signup-login",
     excerpt: "Learn how to create your account and login to 3 Patti Loot app. Step-by-step guide with email binding and account recovery.",
-    image: "/3-patti-loot-account.webp",
     category: "Getting Started",
-    date: "December 15, 2026"
+    date: "March 1, 2026",
   },
   {
     id: 2,
     title: "How to Deposit and Withdraw Money",
     slug: "blog/deposit-withdraw",
     excerpt: "Complete guide on depositing money using JazzCash/EasyPaisa and withdrawing your winnings instantly.",
-    image: "/3-patti-loot-add-money.webp",
     category: "Payments",
-    date: "December 15, 2026"
+    date: "March 5, 2026",
   },
   {
     id: 3,
     title: "Best Tips and Tricks to Win Big",
     slug: "blog/tips-tricks",
     excerpt: "Master the games with our expert tips and tricks. Learn strategies to maximize your winnings in 3 Patti Loot.",
-    image: "/3-patti-loot-refer-and-earn.webp",
     category: "Strategy",
-    date: "December 15, 2026"
+    date: "March 10, 2026",
   },
   {
     id: 4,
     title: "Best 3 Patti Games to Play",
     slug: "blog/best-games",
     excerpt: "Discover the best 3 Patti games including 3 Patti Blue, Card Rummy, 3 Patti Lucky, 3 Patti Sky, and 3 Patti Vegas.",
-    image: "/3-patti-loot-apk.webp",
     category: "Game Reviews",
-    date: "December 15, 2026"
-  }
+    date: "March 15, 2026",
+  },
 ];
 
 export default function BlogPage() {
@@ -97,8 +134,8 @@ export default function BlogPage() {
             >
               <div className="relative h-[200px] overflow-hidden">
                 <Image
-                  src={post.image}
-                  alt={post.title}
+                  src={BLOG_FEATURED_IMAGE_PATH}
+                  alt="3 Patti Loot official logo — featured image for all guides"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

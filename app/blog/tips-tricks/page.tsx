@@ -1,10 +1,11 @@
-import { generateSEO, generateArticleSchema, generateBreadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { generateSEO, generateArticleSchema, generateBreadcrumbSchema, SITE_URL, BLOG_FEATURED_IMAGE_URL } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = generateSEO({
   title: '3 Patti Loot Tips & Tricks 2026 | Win Big with These Strategies',
   description: 'Master 3 Patti Loot with expert tips and tricks. Learn winning strategies for Teen Patti, Rummy, Andar Bahar & Dragon Tiger. Bankroll management, game-specific tactics & pro tips.',
   url: `${SITE_URL}/blog/tips-tricks`,
+  image: BLOG_FEATURED_IMAGE_URL,
   keywords: [
     '3 patti loot tips',
     '3 patti loot tricks',
@@ -25,7 +26,7 @@ export default function TipsTricksPage() {
   const articleSchema = generateArticleSchema({
     title: '3 Patti Loot Tips & Tricks 2026 | Win Big with These Strategies',
     description: 'Master 3 Patti Loot with expert tips and tricks. Learn winning strategies for Teen Patti, Rummy, Andar Bahar & Dragon Tiger.',
-    image: `${SITE_URL}/3-patti-loot.webp`,
+    image: BLOG_FEATURED_IMAGE_URL,
     datePublished: '2026-01-15',
     dateModified: '2026-01-15',
     author: { name: '3 Patti Loot Team', url: `${SITE_URL}/about` },

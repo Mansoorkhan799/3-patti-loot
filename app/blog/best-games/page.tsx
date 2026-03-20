@@ -1,10 +1,11 @@
-import { generateSEO, generateArticleSchema, generateBreadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { generateSEO, generateArticleSchema, generateBreadcrumbSchema, SITE_URL, BLOG_FEATURED_IMAGE_URL } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = generateSEO({
   title: 'Best 3 Patti Games 2026 | Compare Blue, Lucky, Sky, Vegas & Loot',
   description: 'Complete comparison of best 3 Patti games in Pakistan: 3 Patti Loot, Blue, Lucky, Sky & Vegas. See ratings, features, bonuses, withdrawal times & which is best for earning.',
   url: `${SITE_URL}/blog/best-games`,
+  image: BLOG_FEATURED_IMAGE_URL,
   keywords: [
     'best 3 patti game',
     '3 patti blue vs loot',
@@ -25,7 +26,7 @@ export default function BestGamesPage() {
   const articleSchema = generateArticleSchema({
     title: 'Best 3 Patti Games 2026 | Compare Blue, Lucky, Sky, Vegas & Loot',
     description: 'Complete comparison of best 3 Patti games in Pakistan: 3 Patti Loot, Blue, Lucky, Sky & Vegas. See ratings, features, bonuses, withdrawal times.',
-    image: `${SITE_URL}/3-patti-loot.webp`,
+    image: BLOG_FEATURED_IMAGE_URL,
     datePublished: '2026-01-15',
     dateModified: '2026-01-15',
     author: { name: '3 Patti Loot Team', url: `${SITE_URL}/about` },

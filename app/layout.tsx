@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Rajdhani } from "next/font/google";
 import "./globals.css";
-import { generateSEO, generateWebsiteSchema, generateOrganizationSchema, generateMobileAppSchema } from "@/lib/seo";
+import { generateSEO, generateWebsiteSchema, generateOrganizationSchema, generateMobileAppSchema, SITE_URL } from "@/lib/seo";
 import { generateLocalBusinessSchema } from "@/lib/seo-additions";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -27,7 +27,9 @@ const rajdhani = Rajdhani({
   adjustFontFallback: true,
 });
 
-export const metadata: Metadata = generateSEO({});
+export const metadata: Metadata = generateSEO({
+  image: `${SITE_URL}/3-patti-loot.webp`,
+});
 
 export default function RootLayout({
   children,

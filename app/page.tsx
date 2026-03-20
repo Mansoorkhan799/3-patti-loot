@@ -11,7 +11,9 @@ const Hero = dynamic(() => import("@/components/Hero"), {
 
 export const metadata = generateSEO({
   title: "3 Patti Loot Pakistan v1.224 Free Download Official APK",
-  description: "Download 3 Patti Loot APK v1.199(1) official for Android. Play Teen Patti, Rummy, Dragon vs Tiger & more games. Get 100% deposit bonus. Instant withdrawals via JazzCash & EasyPaisa.",
+  description: "3 Patti Loot — download the official APK (v1.224) for Android. Teen Patti, Rummy, Dragon vs Tiger & 25+ games. 100% deposit bonus, JazzCash & EasyPaisa withdrawals. Safe install guide & honest review.",
+  url: SITE_URL,
+  image: `${SITE_URL}/3-patti-loot.webp`,
   keywords: [
     "3 patti loot apk",
     "3 patti loot pakistan",
@@ -85,7 +87,7 @@ export default function HomePage() {
                 <tr className="border-b border-gray-700"><td className="py-3 px-4 font-semibold text-gaming-accent">Developer</td><td className="py-3 px-4">3Patti Loot dev</td></tr>
                 <tr className="border-b border-gray-700"><td className="py-3 px-4 font-semibold text-gaming-accent">Category</td><td className="py-3 px-4">Cards, Game</td></tr>
                 <tr className="border-b border-gray-700"><td className="py-3 px-4 font-semibold text-gaming-accent">Size</td><td className="py-3 px-4">49MB</td></tr>
-                <tr className="border-b border-gray-700"><td className="py-3 px-4 font-semibold text-gaming-accent">Latest Version</td><td className="py-3 px-4">V1.199(1)</td></tr>
+                <tr className="border-b border-gray-700"><td className="py-3 px-4 font-semibold text-gaming-accent">Latest Version</td><td className="py-3 px-4">v1.224 (APK)</td></tr>
                 <tr className="border-b border-gray-700"><td className="py-3 px-4 font-semibold text-gaming-accent">Required OS</td><td className="py-3 px-4">Android 5.0+</td></tr>
                 <tr className="border-b border-gray-700"><td className="py-3 px-4 font-semibold text-gaming-accent">Update</td><td className="py-3 px-4">5th January 2026</td></tr>
                 <tr className="border-b border-gray-700"><td className="py-3 px-4 font-semibold text-gaming-accent">Downloads</td><td className="py-3 px-4">600k+</td></tr>
@@ -98,12 +100,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* E-E-A-T: why this site */}
+      <section className="py-12 px-4 max-w-4xl mx-auto" aria-labelledby="about-site-heading">
+        <div className="glass rounded-lg p-8 border border-gaming-accent/20">
+          <h2 id="about-site-heading" className="text-2xl font-gaming font-bold mb-4 gradient-text">
+            About this 3 Patti Loot guide (Pakistan)
+          </h2>
+          <p className="text-gray-300 mb-4 leading-relaxed">
+            This page is an <strong className="text-white">independent information hub</strong> for <strong className="text-gaming-accent">3 Patti Loot</strong> — how the app works, JazzCash &amp; EasyPaisa payments, and safe APK practices. We are not the app developer; always download from <Link href="/" className="text-gaming-accent underline hover:text-white">trusted sources</Link> and read our <Link href="/blog/real-or-fake" className="text-gaming-accent underline hover:text-white">real vs fake</Link> and <Link href="/blog/install-apk-safely" className="text-gaming-accent underline hover:text-white">safe install</Link> guides before installing. Gambling involves risk; play only if it is legal where you live and never bet more than you can afford to lose.
+          </p>
+          <p className="text-sm text-gray-500">
+            Last updated: March 2026 · For adults 18+ · <Link href="/disclaimer" className="underline hover:text-gaming-accent">Disclaimer</Link>
+          </p>
+        </div>
+      </section>
+
       {/* Overview */}
       <section className="py-16 px-4 max-w-4xl mx-auto">
         <h2 className="text-3xl font-gaming font-bold mb-6 gradient-text text-center">Overview</h2>
         <div className="glass rounded-lg p-8">
-          <p className="text-lg text-gray-300 mb-4">
-            This app is divided into various sections, including card games, slots, poker, and many others, making it easy to find games that you want to play. 3Patti Loot is designed with modern graphics, smooth gameplay, and an easy interface that makes this platform more suitable for both beginners and experienced players. This app also offers you great and interesting services, allowing you to earn significant money even by investing a small amount. You can also win real cash rewards or bonuses for free. So, download the game, and start playing your favorite games to earn real cash for free.
+          <p className="text-lg text-gray-300 mb-4 leading-relaxed">
+            <strong className="text-white">3 Patti Loot</strong> is a Teen Patti–style real-money gaming app popular in Pakistan. You get card games, slots, and casino-style titles in one Android APK, with deposits and withdrawals through <strong className="text-gaming-accent">JazzCash</strong> and <strong className="text-gaming-accent">EasyPaisa</strong>. The interface is built for quick matches and local wallets — ideal if you want to play 3 Patti Loot on mobile data or older phones.
+          </p>
+          <p className="text-lg text-gray-300 mb-4 leading-relaxed">
+            Below you will find download details, feature lists, screenshots, FAQs, and links to step-by-step guides (signup, payments, tips). Use the table above to confirm the <strong className="text-white">latest 3 Patti Loot version</strong> and file size before you install.
           </p>
         </div>
       </section>
@@ -1050,25 +1070,37 @@ export default function HomePage() {
           <p className="text-xl text-gray-300">Explore our comprehensive guides to learn everything about 3Patti Loot:</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          <Link href="/blog" className="glass rounded-lg p-6 hover:bg-gaming-accent/10 transition-all">
-            <h3 className="text-xl font-gaming font-bold mb-2 text-gaming-accent">Is 3Patti Loot Real or Fake?</h3>
-            <p className="text-gray-400 text-sm">Discover the truth about legitimacy and payment methods</p>
+          <Link href="/blog/real-or-fake" className="glass rounded-lg p-6 hover:bg-gaming-accent/10 transition-all">
+            <h3 className="text-xl font-gaming font-bold mb-2 text-gaming-accent">Is 3 Patti Loot Real or Fake?</h3>
+            <p className="text-gray-400 text-sm">Legitimacy, payments, and how to spot fake APKs</p>
+          </Link>
+          <Link href="/blog/install-apk-safely" className="glass rounded-lg p-6 hover:bg-gaming-accent/10 transition-all">
+            <h3 className="text-xl font-gaming font-bold mb-2 text-gaming-accent">Install 3 Patti Loot APK Safely</h3>
+            <p className="text-gray-400 text-sm">Unknown sources, permissions, and official download tips</p>
+          </Link>
+          <Link href="/blog/features-benefits" className="glass rounded-lg p-6 hover:bg-gaming-accent/10 transition-all">
+            <h3 className="text-xl font-gaming font-bold mb-2 text-gaming-accent">3 Patti Loot App Features &amp; Benefits</h3>
+            <p className="text-gray-400 text-sm">Games, wallets, bonuses, and what you get in the APK</p>
           </Link>
           <Link href="/blog/best-games" className="glass rounded-lg p-6 hover:bg-gaming-accent/10 transition-all">
             <h3 className="text-xl font-gaming font-bold mb-2 text-gaming-accent">How to Play 3Patti Loot</h3>
             <p className="text-gray-400 text-sm">Complete beginner guide with rules and tips</p>
           </Link>
-          <Link href="/blog/deposit-withdraw" className="glass rounded-lg p-6 hover:bg-gaming-accent/10 transition-all">
-            <h3 className="text-xl font-gaming font-bold mb-2 text-gaming-accent">How to Earn Money in 3Patti Loot</h3>
-            <p className="text-gray-400 text-sm">Earning methods, bonuses, and withdrawal guide</p>
+          <Link href="/blog/earn-money" className="glass rounded-lg p-6 hover:bg-gaming-accent/10 transition-all">
+            <h3 className="text-xl font-gaming font-bold mb-2 text-gaming-accent">How to Earn Money in 3 Patti Loot</h3>
+            <p className="text-gray-400 text-sm">Bonuses, referrals, rewards, and realistic earning tips</p>
           </Link>
           <Link href="/blog/signup-login" className="glass rounded-lg p-6 hover:bg-gaming-accent/10 transition-all">
             <h3 className="text-xl font-gaming font-bold mb-2 text-gaming-accent">How to Create Account and Login</h3>
             <p className="text-gray-400 text-sm">Step-by-step registration and login guide</p>
           </Link>
+          <Link href="/blog/payment-methods-jazzcash-easypaisa" className="glass rounded-lg p-6 hover:bg-gaming-accent/10 transition-all">
+            <h3 className="text-xl font-gaming font-bold mb-2 text-gaming-accent">Payment Methods — JazzCash &amp; EasyPaisa</h3>
+            <p className="text-gray-400 text-sm">Wallet comparison; pair with our full deposit &amp; withdraw guide</p>
+          </Link>
           <Link href="/blog/deposit-withdraw" className="glass rounded-lg p-6 hover:bg-gaming-accent/10 transition-all">
-            <h3 className="text-xl font-gaming font-bold mb-2 text-gaming-accent">Payment Methods - JazzCash & EasyPaisa</h3>
-            <p className="text-gray-400 text-sm">Complete guide on deposits and withdrawals</p>
+            <h3 className="text-xl font-gaming font-bold mb-2 text-gaming-accent">Deposit &amp; Withdraw Step-by-Step</h3>
+            <p className="text-gray-400 text-sm">Screenshots-style flow for adding and cashing out PKR</p>
           </Link>
           <Link href="/blog/tips-tricks" className="glass rounded-lg p-6 hover:bg-gaming-accent/10 transition-all">
             <h3 className="text-xl font-gaming font-bold mb-2 text-gaming-accent">Tips to Win in 3Patti Loot</h3>
